@@ -1,0 +1,197 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Contact Berkeley Plumbing — Request an Estimate | Newbury Park, CA"
+  description="Request a plumbing estimate from Berkeley Plumbing. C-36 licensed contractor serving Newbury Park, Agoura Hills, Thousand Oaks, Westlake Village, and Calabasas. CSLB #1115151."
+>
+
+  <!-- Hero -->
+  <section class="bg-navy-900 text-white py-16 lg:py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-copper font-semibold text-sm uppercase tracking-widest mb-3">Contact</p>
+      <h1 class="font-display text-4xl lg:text-5xl font-bold mb-5">
+        Request an Estimate
+      </h1>
+      <p class="text-slate-300 text-lg leading-relaxed max-w-2xl">
+        Describe your project below. I'll review the details and follow up with upfront pricing before any work begins. No pressure, no callbacks from an office.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact content -->
+  <section class="py-16 lg:py-20 px-4 bg-white">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12">
+
+      <!-- Form -->
+      <div class="lg:col-span-3">
+        <h2 class="font-display text-2xl font-bold text-navy-900 mb-6">Tell Me About Your Project</h2>
+
+        <!-- Formspree endpoint — replace YOUR_FORM_ID with your actual Formspree form ID -->
+        <form
+          action="https://formspree.io/f/[FORMSPREE_FORM_ID]"
+          method="POST"
+          class="space-y-5"
+        >
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label for="name" class="block text-sm font-medium text-slate-700 mb-1.5">Name <span class="text-red-500" aria-label="required">*</span></label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                autocomplete="name"
+                class="w-full border border-slate-300 rounded px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-copper/40 focus:border-copper transition"
+                placeholder="Your name"
+              />
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-medium text-slate-700 mb-1.5">Phone <span class="text-red-500" aria-label="required">*</span></label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                autocomplete="tel"
+                class="w-full border border-slate-300 rounded px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-copper/40 focus:border-copper transition"
+                placeholder="(805) 555-0100"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-slate-700 mb-1.5">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              class="w-full border border-slate-300 rounded px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-copper/40 focus:border-copper transition"
+              placeholder="you@example.com"
+            />
+          </div>
+
+          <div>
+            <label for="city" class="block text-sm font-medium text-slate-700 mb-1.5">City / Zip Code</label>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              class="w-full border border-slate-300 rounded px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-copper/40 focus:border-copper transition"
+              placeholder="Newbury Park, CA 91320"
+            />
+          </div>
+
+          <div>
+            <label for="service" class="block text-sm font-medium text-slate-700 mb-1.5">Project Type</label>
+            <select
+              id="service"
+              name="service"
+              class="w-full border border-slate-300 rounded px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-copper/40 focus:border-copper transition bg-white"
+            >
+              <option value="">Select a project type</option>
+              <option value="new-construction">New Construction</option>
+              <option value="remodel">Remodel</option>
+              <option value="adu">ADU Plumbing</option>
+              <option value="water-heater">Water Heater</option>
+              <option value="repair">Repair / Diagnosis</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium text-slate-700 mb-1.5">
+              Project Description <span class="text-red-500" aria-label="required">*</span>
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              rows="5"
+              class="w-full border border-slate-300 rounded px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-copper/40 focus:border-copper transition resize-y"
+              placeholder="Describe what you need. The more detail you include (project scope, timeline, location), the more accurate my estimate will be."
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-copper hover:bg-copper-light text-white font-semibold py-4 px-6 rounded transition-colors"
+          >
+            Send Estimate Request
+          </button>
+
+          <p class="text-xs text-slate-500">
+            I'll respond within one business day. For urgent projects, call directly at <a href="tel:(310) 733-7808" class="text-copper hover:underline">(310) 733-7808</a>.
+          </p>
+        </form>
+      </div>
+
+      <!-- Contact info sidebar -->
+      <div class="lg:col-span-2">
+        <div class="space-y-6">
+
+          <div class="bg-stone-warm rounded-xl p-6 border border-slate-100">
+            <h3 class="font-semibold text-navy-900 mb-4">Contact Info</h3>
+            <div class="space-y-3 text-sm text-slate-600">
+              <div>
+                <p class="font-medium text-slate-800">Phone</p>
+                <a href="tel:(310) 733-7808" class="text-copper hover:underline">(310) 733-7808</a>
+              </div>
+              <div>
+                <p class="font-medium text-slate-800">Email</p>
+                <a href="mailto:berkplumbing@gmail.com" class="text-copper hover:underline">berkplumbing@gmail.com</a>
+              </div>
+              <div>
+                <p class="font-medium text-slate-800">Location</p>
+                <p>839 Jenny Dr<br />Newbury Park, CA 91320</p>
+              </div>
+              <div>
+                <p class="font-medium text-slate-800">License</p>
+                <a
+                  href="https://www.cslb.ca.gov/onlineservices/checklicenseII/LicenseDetail.aspx?LicNum=1115151"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-copper hover:underline"
+                >
+                  CSLB #1115151
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-stone-warm rounded-xl p-6 border border-slate-100">
+            <h3 class="font-semibold text-navy-900 mb-3">Service Areas</h3>
+            <ul class="space-y-1.5 text-sm text-slate-600">
+              {[
+                ['Newbury Park', '/service-areas/newbury-park/'],
+                ['Agoura Hills', '/service-areas/agoura-hills/'],
+                ['Thousand Oaks', '/service-areas/thousand-oaks/'],
+                ['Westlake Village', '/service-areas/westlake-village/'],
+                ['Calabasas', '/service-areas/calabasas/'],
+                ['Oak Park', null],
+                ['Moorpark', null],
+              ].map(([city, href]) => (
+                <li>
+                  {href
+                    ? <a href={href} class="hover:text-copper transition-colors">{city}</a>
+                    : <span>{city}</span>
+                  }
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="bg-copper/5 rounded-xl p-5 border border-copper/20">
+            <p class="text-sm text-slate-700 leading-relaxed">
+              <strong class="text-navy-900">For general contractors:</strong> If you're looking for a reliable plumbing sub for an upcoming build or remodel, reach out before the permit is pulled. Early coordination leads to better outcomes on the project timeline.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

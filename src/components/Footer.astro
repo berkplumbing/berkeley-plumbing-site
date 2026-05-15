@@ -1,0 +1,114 @@
+---
+const currentYear = new Date().getFullYear();
+
+const services = [
+  { label: 'New Construction', href: '/services/new-construction/' },
+  { label: 'Remodels & ADUs', href: '/services/remodels-adu/' },
+  { label: 'Water Heaters', href: '/services/water-heaters/' },
+  { label: 'Repairs', href: '/services/repairs/' },
+];
+
+const areas = [
+  { label: 'Newbury Park', href: '/service-areas/newbury-park/' },
+  { label: 'Agoura Hills', href: '/service-areas/agoura-hills/' },
+  { label: 'Thousand Oaks', href: '/service-areas/thousand-oaks/' },
+  { label: 'Westlake Village', href: '/service-areas/westlake-village/' },
+  { label: 'Calabasas', href: '/service-areas/calabasas/' },
+];
+---
+
+<footer class="bg-navy-900 text-slate-300">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- Brand column -->
+      <div class="lg:col-span-1">
+        <a href="/" class="inline-block mb-4" aria-label="Berkeley Plumbing home">
+          <span class="text-white font-display font-semibold text-xl">Berkeley Plumbing</span>
+        </a>
+        <p class="text-sm leading-relaxed mb-4">
+          C-36 licensed plumbing contractor serving the Conejo Valley. New construction, custom remodels, and ADUs done right.
+        </p>
+        <div class="space-y-1 text-sm">
+          <p>
+            <a href="tel:(310) 733-7808" class="hover:text-copper transition-colors">(310) 733-7808</a>
+          </p>
+          <p>
+            <a href="mailto:berkplumbing@gmail.com" class="hover:text-copper transition-colors">berkplumbing@gmail.com</a>
+          </p>
+          <p>Newbury Park, CA 91320</p>
+        </div>
+      </div>
+
+      <!-- Services column -->
+      <div>
+        <h3 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Services</h3>
+        <ul class="space-y-2">
+          {services.map(({ label, href }) => (
+            <li>
+              <a href={href} class="text-sm hover:text-copper transition-colors">
+                {label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Service Areas column -->
+      <div>
+        <h3 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Service Areas</h3>
+        <ul class="space-y-2">
+          {areas.map(({ label, href }) => (
+            <li>
+              <a href={href} class="text-sm hover:text-copper transition-colors">
+                {label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Credentials column -->
+      <div>
+        <h3 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Credentials</h3>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-start gap-2">
+            <span class="text-copper mt-0.5" aria-hidden="true">✓</span>
+            <span>CSLB License #1115151</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-copper mt-0.5" aria-hidden="true">✓</span>
+            <span>C-36 Plumbing Contractor</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-copper mt-0.5" aria-hidden="true">✓</span>
+            <span>PHCC-Trained Journeyman</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-copper mt-0.5" aria-hidden="true">✓</span>
+            <span>Licensed and Insured</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-copper mt-0.5" aria-hidden="true">✓</span>
+            <span>All work to California Plumbing Code</span>
+          </li>
+        </ul>
+        <a
+          href="https://www.cslb.ca.gov/onlineservices/checklicenseII/LicenseDetail.aspx?LicNum=1115151"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block mt-4 text-xs text-copper hover:text-copper-light underline"
+        >
+          Verify license on CSLB.ca.gov
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-navy-800 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <p>&copy; {currentYear} Berkeley Plumbing. All rights reserved.</p>
+      <p>Serving Newbury Park, Agoura Hills, Thousand Oaks, Westlake Village, and Calabasas, CA</p>
+    </div>
+  </div>
+</footer>

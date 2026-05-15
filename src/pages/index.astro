@@ -1,0 +1,229 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const services = [
+  {
+    title: 'New Construction',
+    description: 'Full rough-in to finish for custom homes and multi-unit builds. We work directly from architectural plans and coordinate with your GC and design team.',
+    href: '/services/new-construction/',
+    icon: 'M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z',
+  },
+  {
+    title: 'Remodels & ADUs',
+    description: 'Kitchen and bathroom remodels, full ADU plumbing, and whole-home repipes. Built to California code and inspected to pass the first time.',
+    href: '/services/remodels-adu/',
+    icon: 'M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z',
+  },
+  {
+    title: 'Water Heaters',
+    description: 'Install and repair of tankless and traditional water heaters. Upfront pricing with no surprises before we start.',
+    href: '/services/water-heaters/',
+    icon: 'M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z',
+  },
+  {
+    title: 'Repairs',
+    description: 'Leak detection, fixture repair, and diagnostics. We find the root cause and fix it right, not just the symptom.',
+    href: '/services/repairs/',
+    icon: 'M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z',
+  },
+];
+
+const areas = ['Newbury Park', 'Agoura Hills', 'Thousand Oaks', 'Westlake Village', 'Calabasas', 'Oak Park', 'Moorpark'];
+---
+
+<BaseLayout
+  title="Berkeley Plumbing — C-36 Licensed Plumber | Newbury Park, CA"
+  description="C-36 licensed plumbing contractor in Newbury Park serving the Conejo Valley. Specializing in new construction, custom remodels, ADUs, and water heaters. CSLB #1115151."
+>
+
+  <!-- Hero -->
+  <section class="bg-navy-900 text-white py-20 lg:py-28 px-4">
+    <div class="max-w-5xl mx-auto">
+      <p class="text-copper font-semibold text-sm uppercase tracking-widest mb-4">Conejo Valley's Custom Plumbing Specialist</p>
+      <h1 class="font-display text-4xl lg:text-6xl font-bold leading-tight mb-6 max-w-3xl">
+        Plumbing Crafted for Exceptional Homes
+      </h1>
+      <p class="text-slate-300 text-lg lg:text-xl leading-relaxed mb-8 max-w-2xl">
+        C-36 licensed. PHCC-trained journeyman. Serving custom builders, homeowners, and general contractors across the Conejo Valley with new construction, remodels, ADUs, and more.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a
+          href="/contact/"
+          class="bg-copper hover:bg-copper-light text-white font-semibold px-8 py-4 rounded text-center transition-colors"
+        >
+          Request an Estimate
+        </a>
+        <a
+          href="tel:(310) 733-7808"
+          class="border border-slate-600 hover:border-slate-400 text-white font-semibold px-8 py-4 rounded text-center transition-colors"
+        >
+          Call (310) 733-7808
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust bar -->
+  <section class="bg-navy-800 border-b border-navy-700 py-4 px-4">
+    <div class="max-w-5xl mx-auto">
+      <ul class="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-sm text-slate-300">
+        <li class="flex items-center gap-2">
+          <span class="text-copper font-bold" aria-hidden="true">✓</span>
+          C-36 Licensed Contractor
+        </li>
+        <li class="flex items-center gap-2">
+          <span class="text-copper font-bold" aria-hidden="true">✓</span>
+          CSLB #1115151
+        </li>
+        <li class="flex items-center gap-2">
+          <span class="text-copper font-bold" aria-hidden="true">✓</span>
+          PHCC-Trained Journeyman
+        </li>
+        <li class="flex items-center gap-2">
+          <span class="text-copper font-bold" aria-hidden="true">✓</span>
+          Licensed and Insured
+        </li>
+        <li class="flex items-center gap-2">
+          <span class="text-copper font-bold" aria-hidden="true">✓</span>
+          Upfront Pricing
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Services grid -->
+  <section class="py-16 lg:py-24 px-4 bg-stone-warm">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl lg:text-4xl font-bold text-navy-900 mb-4">Services</h2>
+        <p class="text-slate-600 max-w-xl mx-auto">
+          From rough-in to final inspection, every project is handled by the same licensed journeyman, not a rotating crew.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {services.map(({ title, description, href, icon }) => (
+          <a
+            href={href}
+            class="group bg-white rounded-lg p-8 shadow-sm border border-slate-100 hover:shadow-md hover:border-copper/30 transition-all"
+          >
+            <div class="w-10 h-10 bg-copper/10 rounded-lg flex items-center justify-center mb-5 group-hover:bg-copper/20 transition-colors">
+              <svg class="w-5 h-5 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={icon} />
+              </svg>
+            </div>
+            <h3 class="font-display text-xl font-semibold text-navy-900 mb-3 group-hover:text-copper transition-colors">
+              {title}
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">{description}</p>
+            <span class="text-copper text-sm font-semibold">Learn more →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- About / differentiation -->
+  <section class="py-16 lg:py-24 px-4 bg-white">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="text-copper font-semibold text-sm uppercase tracking-widest mb-3">Why Berkeley Plumbing</p>
+        <h2 class="font-display text-3xl lg:text-4xl font-bold text-navy-900 mb-6">
+          One Plumber. Every Project. Full Accountability.
+        </h2>
+        <div class="space-y-5 text-slate-600 leading-relaxed">
+          <p>
+            Most plumbing companies send whoever is available. You get a different face each visit, no continuity, and nobody who knows the full scope of your project.
+          </p>
+          <p>
+            Berkeley Plumbing is different. As a solo C-36 contractor, I handle every project personally: from reading the architectural plans to the final inspection. When you call, you reach the plumber who actually did the work.
+          </p>
+          <p>
+            I specialize in high-end custom homes, new construction, and ADUs throughout the Conejo Valley. My background through PHCC and years working in the region's most demanding custom builds gives me the technical foundation to handle complex projects that generalist plumbers turn down.
+          </p>
+        </div>
+        <a
+          href="/about/"
+          class="inline-block mt-8 text-copper font-semibold hover:text-copper-dark transition-colors"
+        >
+          About Berkeley Plumbing →
+        </a>
+      </div>
+      <div class="bg-stone-warm rounded-xl p-8 border border-slate-100">
+        <ul class="space-y-5">
+          {[
+            ['CSLB License #1115151', 'Verify directly at CSLB.ca.gov. Your protection, not a marketing claim.'],
+            ['C-36 Plumbing Contractor', 'The California license required for full plumbing work on any residential or commercial project.'],
+            ['PHCC-Trained Journeyman', 'Formal trade education through the Plumbing Heating Cooling Contractors association.'],
+            ['Upfront Pricing', 'You know the full cost before any work begins. No hourly surprises, no scope creep.'],
+            ['California Plumbing Code', 'All work is designed and installed to pass California inspection on the first visit.'],
+          ].map(([title, body]) => (
+            <li class="flex gap-4">
+              <span class="flex-shrink-0 w-6 h-6 bg-copper/10 rounded-full flex items-center justify-center mt-0.5" aria-hidden="true">
+                <span class="text-copper text-xs font-bold">✓</span>
+              </span>
+              <div>
+                <p class="font-semibold text-navy-900 text-sm">{title}</p>
+                <p class="text-slate-500 text-sm mt-0.5">{body}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service areas -->
+  <section class="py-16 lg:py-20 px-4 bg-stone-warm">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="font-display text-3xl font-bold text-navy-900 mb-4">Service Areas</h2>
+      <p class="text-slate-600 mb-10 max-w-lg mx-auto">
+        Based in Newbury Park, serving all of the Conejo Valley and surrounding communities.
+      </p>
+      <div class="flex flex-wrap justify-center gap-3">
+        {areas.map((area) => {
+          const slug = area.toLowerCase().replace(/\s+/g, '-');
+          const hasPage = ['newbury-park', 'agoura-hills', 'thousand-oaks', 'westlake-village', 'calabasas'].includes(slug);
+          return hasPage ? (
+            <a
+              href={`/service-areas/${slug}/`}
+              class="px-5 py-2.5 bg-white border border-slate-200 hover:border-copper hover:text-copper text-slate-700 rounded-full text-sm font-medium transition-colors"
+            >
+              {area}
+            </a>
+          ) : (
+            <span class="px-5 py-2.5 bg-white border border-slate-200 text-slate-700 rounded-full text-sm font-medium">
+              {area}
+            </span>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 lg:py-24 px-4 bg-navy-900 text-white text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="font-display text-3xl lg:text-4xl font-bold mb-4">
+        Every project starts with a conversation.
+      </h2>
+      <p class="text-slate-300 text-lg mb-8">
+        Describe your project and I'll provide a straightforward estimate. No pressure, no callbacks from an office.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/contact/"
+          class="bg-copper hover:bg-copper-light text-white font-semibold px-10 py-4 rounded text-center transition-colors"
+        >
+          Request an Estimate
+        </a>
+        <a
+          href="tel:(310) 733-7808"
+          class="border border-slate-600 hover:border-slate-400 text-white font-semibold px-10 py-4 rounded text-center transition-colors"
+        >
+          Call (310) 733-7808
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

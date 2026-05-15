@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const city = "Calabasas";
+---
+
+<BaseLayout
+  title="Plumber in Calabasas, CA | Berkeley Plumbing — CSLB #1115151"
+  description="Licensed plumber in Calabasas, CA. Custom remodels, new construction, and ADU plumbing for high-end homes. C-36 licensed, upfront pricing. CSLB #1115151."
+>
+
+  <section class="bg-navy-900 text-white py-16 lg:py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-copper font-semibold text-sm uppercase tracking-widest mb-3">Service Area</p>
+      <h1 class="font-display text-4xl lg:text-5xl font-bold mb-5">
+        Plumber in {city}, CA
+      </h1>
+      <p class="text-slate-300 text-lg leading-relaxed max-w-2xl">
+        Precision plumbing for Calabasas's custom homes and luxury remodels. New construction, ADUs, kitchen and bath remodels, and water heater service. C-36 licensed, CSLB #1115151.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 mt-8">
+        <a href="/contact/" class="bg-copper hover:bg-copper-light text-white font-semibold px-8 py-4 rounded text-center transition-colors">Request an Estimate</a>
+        <a href="tel:(310) 733-7808" class="border border-slate-600 hover:border-slate-400 text-white font-semibold px-8 py-4 rounded text-center transition-colors">Call (310) 733-7808</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 lg:py-20 px-4 bg-white">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div class="lg:col-span-2 prose prose-slate max-w-none">
+        <h2 class="font-display text-2xl font-bold text-navy-900">Plumbing Services in {city}</h2>
+        <p class="text-slate-600 leading-relaxed">
+          Calabasas is known for its gated communities, luxury estates, and high expectations for contractor quality. Berkeley Plumbing brings C-36 licensed expertise and PHCC trade training to projects in Calabasas where the standard for workmanship is genuinely high.
+        </p>
+        <p class="text-slate-600 leading-relaxed">
+          Common Calabasas projects include custom primary bathroom remodels, whole-home repipes on aging water systems, luxury outdoor entertainment area plumbing, and new construction coordination for custom builds in the hills. All work is delivered with upfront pricing and a single point of contact throughout.
+        </p>
+        <h3 class="font-display text-xl font-semibold text-navy-900 mt-6">Services in {city}</h3>
+        <ul class="space-y-2 text-slate-600">
+          <li class="flex gap-3"><span class="text-copper mt-1 flex-shrink-0">✓</span><a href="/services/new-construction/" class="hover:text-copper transition-colors">New Construction Plumbing</a></li>
+          <li class="flex gap-3"><span class="text-copper mt-1 flex-shrink-0">✓</span><a href="/services/remodels-adu/" class="hover:text-copper transition-colors">Custom Remodels and ADUs</a></li>
+          <li class="flex gap-3"><span class="text-copper mt-1 flex-shrink-0">✓</span><a href="/services/water-heaters/" class="hover:text-copper transition-colors">Water Heater Install and Repair</a></li>
+          <li class="flex gap-3"><span class="text-copper mt-1 flex-shrink-0">✓</span><a href="/services/repairs/" class="hover:text-copper transition-colors">Plumbing Repairs and Diagnostics</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-1">
+        <div class="bg-stone-warm rounded-xl p-6 border border-slate-100 sticky top-24">
+          <h3 class="font-semibold text-navy-900 mb-2">Berkeley Plumbing</h3>
+          <p class="text-slate-600 text-sm mb-4">Serving {city} and the Conejo Valley<br />CSLB #1115151</p>
+          <a href="/contact/" class="block w-full bg-copper hover:bg-copper-light text-white font-semibold py-3 px-5 rounded text-center transition-colors mb-3">Request an Estimate</a>
+          <a href="tel:(310) 733-7808" class="block w-full border border-slate-300 text-slate-700 font-semibold py-3 px-5 rounded text-center transition-colors text-sm">Call (310) 733-7808</a>
+          <div class="mt-6 pt-6 border-t border-slate-200 space-y-2 text-sm text-slate-600">
+            <p class="flex gap-2"><span class="text-copper">✓</span> Luxury home specialist</p>
+            <p class="flex gap-2"><span class="text-copper">✓</span> C-36 Licensed Contractor</p>
+            <p class="flex gap-2"><span class="text-copper">✓</span> Upfront pricing</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const city = "Newbury Park";
+const services = [
+  { label: 'New Construction Plumbing', href: '/services/new-construction/' },
+  { label: 'Remodels and ADUs', href: '/services/remodels-adu/' },
+  { label: 'Water Heater Install and Repair', href: '/services/water-heaters/' },
+  { label: 'Plumbing Repairs', href: '/services/repairs/' },
+];
+---
+
+<BaseLayout
+  title="Plumber in Newbury Park, CA | Berkeley Plumbing — CSLB #1115151"
+  description="Licensed plumber in Newbury Park, CA. Berkeley Plumbing offers new construction, remodels, ADUs, and water heater service. C-36 licensed, upfront pricing. CSLB #1115151."
+>
+
+  <!-- Hero -->
+  <section class="bg-navy-900 text-white py-16 lg:py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-copper font-semibold text-sm uppercase tracking-widest mb-3">Service Area</p>
+      <h1 class="font-display text-4xl lg:text-5xl font-bold mb-5">
+        Plumber in {city}, CA
+      </h1>
+      <p class="text-slate-300 text-lg leading-relaxed max-w-2xl">
+        Berkeley Plumbing is based in Newbury Park. C-36 licensed and PHCC-trained, serving homeowners, general contractors, and design teams throughout the 91320 zip code and surrounding Conejo Valley.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 mt-8">
+        <a href="/contact/" class="bg-copper hover:bg-copper-light text-white font-semibold px-8 py-4 rounded text-center transition-colors">
+          Request an Estimate
+        </a>
+        <a href="tel:(310) 733-7808" class="border border-slate-600 hover:border-slate-400 text-white font-semibold px-8 py-4 rounded text-center transition-colors">
+          Call (310) 733-7808
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="py-16 lg:py-20 px-4 bg-white">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div class="lg:col-span-2 prose prose-slate max-w-none">
+        <h2 class="font-display text-2xl font-bold text-navy-900">Plumbing Services in Newbury Park</h2>
+        <p class="text-slate-600 leading-relaxed">
+          Newbury Park is home to a diverse mix of residential projects: established custom homes, active new construction in growing subdivisions, and a strong ADU build-out driven by California's housing policies. Berkeley Plumbing serves all of it.
+        </p>
+        <p class="text-slate-600 leading-relaxed">
+          As a Newbury Park-based contractor, I know the local building departments, inspection requirements, and the specific challenges that come with plumbing in this part of Ventura County. Every project, from a bathroom remodel in a 1980s ranch home to a full plumbing rough-in for a new custom build, is handled with the same upfront pricing and personal accountability.
+        </p>
+        <h3 class="font-display text-xl font-semibold text-navy-900 mt-6">Services Available in {city}</h3>
+        <ul class="space-y-2">
+          {services.map(({ label, href }) => (
+            <li class="flex gap-3">
+              <span class="text-copper mt-1 flex-shrink-0" aria-hidden="true">✓</span>
+              <a href={href} class="text-slate-600 hover:text-copper transition-colors">{label}</a>
+            </li>
+          ))}
+        </ul>
+        <h3 class="font-display text-xl font-semibold text-navy-900 mt-6">ADU Plumbing in Newbury Park</h3>
+        <p class="text-slate-600 leading-relaxed">
+          ADU projects in Newbury Park and the 91320 zip code have increased significantly. Berkeley Plumbing has completed ADU plumbing from rough-in through final inspection, coordinating with homeowners and their contractors to ensure the system is designed correctly before walls close.
+        </p>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="lg:col-span-1">
+        <div class="bg-stone-warm rounded-xl p-6 border border-slate-100 sticky top-24">
+          <h3 class="font-semibold text-navy-900 mb-2">Berkeley Plumbing</h3>
+          <p class="text-slate-600 text-sm mb-4">839 Jenny Dr<br />Newbury Park, CA 91320</p>
+          <a href="/contact/" class="block w-full bg-copper hover:bg-copper-light text-white font-semibold py-3 px-5 rounded text-center transition-colors mb-3">
+            Request an Estimate
+          </a>
+          <a href="tel:(310) 733-7808" class="block w-full border border-slate-300 text-slate-700 font-semibold py-3 px-5 rounded text-center transition-colors text-sm">
+            Call (310) 733-7808
+          </a>
+          <div class="mt-6 pt-6 border-t border-slate-200 space-y-2 text-sm text-slate-600">
+            <p class="flex gap-2"><span class="text-copper" aria-hidden="true">✓</span> Based in Newbury Park</p>
+            <p class="flex gap-2"><span class="text-copper" aria-hidden="true">✓</span> CSLB #1115151</p>
+            <p class="flex gap-2"><span class="text-copper" aria-hidden="true">✓</span> C-36 Licensed</p>
+            <p class="flex gap-2"><span class="text-copper" aria-hidden="true">✓</span> Upfront pricing</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
